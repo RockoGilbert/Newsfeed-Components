@@ -89,6 +89,31 @@ const data = [
   }
 ];
 
+
+
+
+const articles = document.getElementById('.article')
+function articleMaker('article'){
+
+  
+  // Article
+  let article = document.createElement('div')
+    article.classList.add('article')
+    article.appendChild(article);
+
+  
+  //Article Title  
+    let articleTitle = document.createElement('h2')
+    articleTitle.textContent = data1.title;
+    article.appendChild(articleTitle);
+
+  // Date of Article
+
+  
+
+}
+
+
 /*
   Step 1: Write a component called 'articleMaker' to create an article.
   Your component is a function that takes an article object as its only argument,
