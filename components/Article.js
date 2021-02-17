@@ -97,23 +97,58 @@ function articleMaker('article'){
 
   
   // Article
-  let article = document.createElement('div')
-    article.classList.add('article')
+  let article = document.createElement('div');
+    article.classList.add('article');
     article.appendChild(article);
 
   
   //Article Title  
-    let articleTitle = document.createElement('h2')
+    let articleTitle = document.createElement('h2');
     articleTitle.textContent = data1.title;
     article.appendChild(articleTitle);
 
   // Date of Article
 
-  
+  let dateOfArticle = document.createElement('p');
+  dateOfArticle.classList.add('date');
+  dateOfArticle.textContent = dateOfArticle.date;
+  article.appendChild(dateOfArticle);
 
-}
+
+// Para 1
+
+let para1 = document.createElement('p');
+para1.textContent = "article.firstParagraph";
+article.appenChild(para1)
+
+// Para 2
+let para2 = document.createElement('p');
+para2.texttContent = "article.secondParagraph";
+article.appenChild(para2) 
+
+// Para 3
+let para3 = document.createElement('p');
+para3.textContent = "article.thirdParagraph";
+article.appenChild(para3)
 
 
+// Expand Buttton
+let span = document.createElement('span');
+  span.classList.add('expandButton');
+  span.textContent('Article');
+  span.addEventListener('click', () => {
+    article.classList.toggle('article-open');
+  })
+
+
+return articles;
+
+  // Loop over data
+   data.forEach( article => articleDiv.appenChild(articleMaker(article)));
+
+  // New Article Div
+let articleDiv = document.querySelector('.articles')
+console.log(articleDiv)
 /*
   Step 1: Write a component called 'articleMaker' to create an article.
   Your component is a function that takes an article object as its only argument,

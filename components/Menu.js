@@ -9,10 +9,35 @@ let menuItems = [
   'Log Out'
 ];
 
+
+
+// Step 1.   MenuMaker
+let menu = document.createElement('div');
+  menu.classList.add('menu');
+  menu.appendChild('menu');
+
+let ul = document.createElement('ul');
+  menu.appendChild(ul);
+
+
+  // Step 2 Iterate over Array
+  menuItems.forEach(items => {
+    let listItems = document.createElement('li')
+    listItems.textContent = items;
+    ul.appendChild(listItems)
+   // Step 3
+    let meButton = document.getElementById('img');
+  })
+
+//Step 4. eventListener/toggle
+
+ menuButton.addEventListener('click', () => {
+   menuButton.classList.toggle('menu--open');
+ } 
+  
 /* 
   Step 1: Write a component called 'menuMaker' to create a menu like the markup below:
-
-  <div class="menu">
+   <div class="menu">
     <ul>
       {each menu item as an <li>}
     </ul>
@@ -20,7 +45,7 @@ let menuItems = [
 
   The 'menuMaker' takes an array of menu items as its only argument.
 
-  Step 2: Inside the function, iterate over the array creating a list item <li> element for each item in the array.
+ Step 2: Inside the function, iterate over the array creating a list item <li> element for each item in the array.
   Add those items to the <ul>
 
   Step 3: Still inside your function, select from the DOM the menu button (the element with a class of 'menu-button').
@@ -31,3 +56,10 @@ let menuItems = [
 
   Step 6: Use 'menuMaker' to create a menu using the 'menuItems' array, and append the returned menu to the header.
 */
+
+// Step 5. Return Div
+return menu;
+
+
+// Step 6 Create Menu/Append
+const menuMaker = 
